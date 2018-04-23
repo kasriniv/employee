@@ -1,0 +1,94 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0.0",
+    "title" : "employee"
+  },
+  "paths" : {
+    "/employee" : {
+      "get" : {
+        "summary" : "for get ops",
+        "description" : "to get 1 or n employees",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "when all is good",
+            "schema" : {
+              "$ref" : "#/definitions/employee"
+            }
+          }
+        },
+        "x-contentType" : "application/json",
+        "x-accepts" : "application/json"
+      },
+      "post" : {
+        "summary" : "to create new employee",
+        "description" : "to create new employee",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "description" : "employee type here",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/employee"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "when all is good",
+            "schema" : {
+              "$ref" : "#/definitions/employee"
+            }
+          }
+        },
+        "x-contentType" : "application/json",
+        "x-accepts" : "application/json"
+      },
+      "put" : {
+        "summary" : "to edit employee",
+        "description" : "to edit employee",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "description" : "employee type here",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/employee"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "when all is good",
+            "schema" : {
+              "$ref" : "#/definitions/employee"
+            }
+          }
+        },
+        "x-contentType" : "application/json",
+        "x-accepts" : "application/json"
+      }
+    }
+  },
+  "definitions" : {
+    "employee" : {
+      "type" : "object",
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "category" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "region" : {
+          "type" : "string"
+        }
+      },
+      "title" : "Root Type for employee",
+      "description" : "The root of the employee type's schema."
+    }
+  }
+}
