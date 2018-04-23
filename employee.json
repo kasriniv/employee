@@ -1,0 +1,89 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "employee",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/employee": {
+      "get": {
+        "summary": "for get ops",
+        "description": "to get 1 or n employees",
+        "responses": {
+          "200": {
+            "description": "when all is good",
+            "schema": {
+              "$ref": "#/definitions/employee"
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "to edit employee",
+        "description": "to edit employee",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "employee type here",
+            "schema": {
+              "$ref": "#/definitions/employee"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "when all is good",
+            "schema": {
+              "$ref": "#/definitions/employee"
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "to create new employee",
+        "description": "to create new employee",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "employee type here",
+            "schema": {
+              "$ref": "#/definitions/employee"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "when all is good",
+            "schema": {
+              "$ref": "#/definitions/employee"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "employee": {
+      "title": "Root Type for employee",
+      "description": "The root of the employee type's schema.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "region": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
