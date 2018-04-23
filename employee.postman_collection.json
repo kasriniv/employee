@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "6fe43bfb-e4ef-4ecc-b1b8-cd658af0b3a4",
+		"name": "employee",
+		"description": "version=1.0   details about the employee service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "employee",
+			"description": "Folder for employee",
+			"item": [
+				{
+					"name": "for get ops",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http:///employee",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"employee"
+							]
+						},
+						"description": "to get 1 or n employees"
+					},
+					"response": [
+						{
+							"id": "f8381de8-86a3-45cc-a022-b59301bb2c15",
+							"name": "for get ops",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http:///employee",
+									"host": [
+										"http:"
+									],
+									"port": "",
+									"path": [
+										"",
+										"",
+										"employee"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [],
+							"cookie": [],
+							"body": "{\n\t\"name\": \"mock employee response here\",\n\t\"category\": \"regular\",\n\t\"id\": 1,\n\t\"region\": \"Americas\"\n}"
+						}
+					]
+				},
+				{
+					"name": "to edit employee",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "employee type here"
+						},
+						"url": {
+							"raw": "http:///employee",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"employee"
+							]
+						},
+						"description": "to edit employee"
+					},
+					"response": []
+				},
+				{
+					"name": "to create new employee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "employee type here"
+						},
+						"url": {
+							"raw": "http:///employee",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"employee"
+							]
+						},
+						"description": "to create new employee"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "983202a1-3fbb-49a9-b600-899cd68a4b71",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "ffef129f-11ff-4f92-a4ab-f862615d5934",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
